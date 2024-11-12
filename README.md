@@ -2,6 +2,8 @@
 
 A Neovim plugin for generating and previewing PlantUML diagrams directly within Neovim. This plugin allows users to preview ASCII representations of diagrams and export them to various formats (e.g., PNG, SVG).
 
+![demo gif](./docs/plantuml.gif)
+
 ## Features
 
 - Render PlantUML diagrams as ASCII in a window within Neovim.
