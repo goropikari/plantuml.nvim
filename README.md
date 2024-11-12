@@ -26,6 +26,7 @@ require('lazy').setup({
       base_url = 'https://www.plantuml.com/plantuml',
       reload_events = { 'BufWritePre' },
       viewer = 'xdg-open', -- Image viewer for non-ASCII exports
+      docker_image = 'plantuml/plantuml-server:tomcat'
     },
   },
 }, {
@@ -42,7 +43,7 @@ require('lazy').setup({
   - `:PlantumlPreview ascii`: Preview the ASCII rendering in a floating window.
   - `:PlantumlPreview png`: Export the diagram as a PNG file and open it with the specified viewer.
   - Supports PNG, SVG, and other formats.
-
 - `:PlantumlExport [format] [path]`: Export the current diagram to a specified format and path.
   - `:PlantumlExport png ~/diagrams/diagram.png`: Export as PNG to `~/diagrams/diagram.png`.
   - `:PlantumlExport svg`: Export as SVG and print the path in Neovim.
+- `:PlantumlStartDocker`: Start plantuml container.

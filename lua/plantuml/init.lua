@@ -12,6 +12,7 @@ local default_config = {
   base_url = 'https://www.plantuml.com/plantuml',
   reload_events = { 'BufWritePre' },
   viewer = 'xdg-open',
+  docker_image = 'plantuml/plantuml-server:tomcat',
 }
 local config = {}
 
@@ -106,7 +107,7 @@ vim.api.nvim_create_user_command('PlantumlStartDocker', function(opts)
     'run',
     '-d',
     '--rm',
-    'plantuml/plantuml-server:tomcat',
+    config.docker_image,
   }, {}, function(obj)
     if obj.code ~= 0 then
       vim.notify('failed to run plantuml container', vim.log.levels.WARN)
