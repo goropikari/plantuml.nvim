@@ -20,7 +20,6 @@ A Neovim plugin for generating and previewing PlantUML diagrams directly within 
 lazy.nvim
 
 ```lua
-require('lazy').setup({
   {
     'goropikari/plantuml.nvim',
     opts = {
@@ -31,11 +30,6 @@ require('lazy').setup({
       docker_image = 'plantuml/plantuml-server:tomcat'
     },
   },
-}, {
-  rocks = {
-    hererocks = true,
-  },
-})
 ```
 
 ## Usage
@@ -49,3 +43,15 @@ require('lazy').setup({
   - `:PlantumlExport png ~/diagrams/diagram.png`: Export as PNG to `~/diagrams/diagram.png`.
   - `:PlantumlExport svg`: Export as SVG and print the path in Neovim.
 - `:PlantumlStartDocker`: Start plantuml container.
+
+## Troubleshoot
+
+If hererocks build fails, install a readline.
+
+```bash
+sudo apt install libreadline-dev
+```
+
+Clean this plugin and restart neovim to reinstall this plugin.
+
+ref: https://github.com/folke/lazy.nvim/issues/1548#issuecomment-2188183020
