@@ -55,3 +55,11 @@ sudo apt install libreadline-dev
 Clean this plugin and restart neovim to reinstall this plugin.
 
 ref: https://github.com/folke/lazy.nvim/issues/1548#issuecomment-2188183020
+
+## Alternative
+
+- https://github.com/iamcco/markdown-preview.nvim
+- https://github.com/javiorfo/nvim-soil
+- https://github.com/weirongxu/plantuml-previewer.vim
+- https://github.com/skanehira/preview-uml.vim
+- https://gitlab.com/itaranto/plantuml.nvim
